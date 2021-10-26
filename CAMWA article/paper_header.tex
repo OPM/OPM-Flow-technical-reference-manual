@@ -1,0 +1,100 @@
+
+\usepackage[utf8]{inputenc}
+\usepackage{xspace}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{comment}
+\usepackage{placeins}
+\usepackage[autostyle]{csquotes}
+\usepackage{amsmath}
+\usepackage{todonotes}
+\usepackage{anslistings}
+\usepackage{enumitem}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\newcommand{\enablelinenumbers}{}
+\newread\datafile
+\openin\datafile=linenumbers.txt
+\ifeof\datafile
+\message{File linenumbers.txt is missing, disabling line numbering!}
+\else
+\closein\datafile
+\input{linenumbers.txt}
+\fi
+
+\usetikzlibrary{positioning}
+
+\journal{Computers \& Mathematics with Applications}
+
+\bibliographystyle{elsarticle-num}
+
+\setlist[description]{style=multiline,leftmargin=2cm,labelwidth=3.5em,itemsep=0pt}
+
+
+\newcommand{\dune}{\textsc{Dune}\xspace}
+\newcommand{\dunecommon}{dune-common\xspace}
+\newcommand{\dunegeometry}{dune-geometry\xspace}
+\newcommand{\dunegrid}{dune-grid\xspace}
+\newcommand{\duneistl}{dune-istl\xspace}
+
+\newcommand{\opm}{OPM\xspace}
+\newcommand{\opmcommon}{opm-common\xspace}
+\newcommand{\opmdata}{opm-data\xspace}
+\newcommand{\opmgrid}{opm-grid\xspace}
+\newcommand{\opmmaterial}{opm-material\xspace}
+\newcommand{\opmmodels}{opm-models\xspace}
+\newcommand{\opmsimulators}{opm-simulators\xspace}
+\newcommand{\opmupscaling}{opm-upscaling\xspace}
+\newcommand{\opmtests}{opm-tests\xspace}
+
+\newcommand{\opmflow}{OPM Flow\xspace}
+
+\newcommand{\opmversion}{2019.10\xspace}
+
+\newcommand{\petsc}{PETSc\xspace}
+
+\newcommand{\COto}{CO\ensuremath{_\mathsf{2}}\xspace}
+
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\Code}[1]{\texttt{#1}}
+\newcommand{\red}[1]{\color{red} #1}
+
+\newcommand{\Kb}{{\bf K}}
+\newcommand{\vb}{{\bf v}}
+\newcommand{\gb}{{\bf g}}
+\newcommand{\nb}{{\bf n}}
+\newcommand{\xb}{{\bf x}}
+\newcommand{\qb}{{\bf q}}
+\newcommand{\ub}{{\bf u}}
+\newcommand{\cb}{{\bf c}}
+
+\graphicspath{{./figures/spe1/}{./figures/spe3/}{./figures/spe9/}}
+
+% Alter some LaTeX defaults for better treatment of figures:
+% See p.105 of "TeX Unbound" for suggested values.
+% See pp. 199-200 of Lamport's "LaTeX" book for details.
+% General parameters, for ALL pages:
+\renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+\renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+% Parameters for TEXT pages (not float pages):
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}     % 2 may work better
+\setcounter{dbltopnumber}{2}    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+\renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+% Parameters for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+% N.B.: floatpagefraction MUST be less than topfraction !!
+\renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+\newcommand{\revised}{\color{red}}
+%\newcommand{\revised}{}

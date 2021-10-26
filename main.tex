@@ -1,0 +1,95 @@
+%\documentclass{article}
+\documentclass{elsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{import}
+
+\input{CAMWA article/paper_header}
+
+\title{OPM Flow technical reference manual}
+\author{NN}
+%\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\subsection{Overview}
+\subsection{Module compatibility matrix}
+
+\section{Black-oil Model Formulation}
+\subsection{Grid Types}
+\subsection{Units}
+\subsection{Model Flow Equations}
+
+\section{Rock Property Formulation}
+\subsection{Introduction}
+\subsection{Conventional rock properties}
+\subsection{Relative permeability and capillary pressure}
+\subsection{Relative permeability End-Point scaling}
+\subsection{Capillary pressure End-Point scaling}
+\subsection{Hysteresis}
+
+\section{Fluid Property Formulation}
+\subsection{Introduction}
+\subsection{Standard Black-Oil Model}
+\subsection{Brine model}
+\subsection{CO2 model}
+\subsection{Foam model}
+\subsection{Polymer model}
+\subsection{Tracer model}
+\subsection{Surfactant model}
+
+\section{Aquifer Models}
+\subsection{Carter-Tracy Aquifers}
+\subsection{Fetkovich Aquifers}
+\subsection{Numerical Aquifers}
+
+\section{Initialization}
+\subsection{Equilibrium Initialization}
+\subsection{Enumeration Initialization}
+\subsection{Restart Initialization}
+
+\section{Well Models}
+\subsection{Introduction}
+\subsection{Standard wells}
+\subsection{Multi-Segment wells}
+\subsection{Well Potentials}
+
+\section{Numerical Solution Methodology}
+\subsection{Overview}
+\subsection{Solving the Linear Equations}
+\subsection{Automatic differentiation}
+\subsection{Parallelization}
+\subsection{Convergence reports}
+\subsection{Timing Reports}
+
+\section{Enhanced Model Formulations}
+\subsection{C02 storage}
+\subsection{Diffusion}
+\subsection{Miscible models}
+\subsection{Salt precipitation}
+\subsection{Scale deposition}
+\subsection{Solvent}
+\subsection{Thermal}
+\subsection{Water vaporization}
+
+\section{Auxiliary Applications}
+\subsection{Upscaling}
+
+\begin{appendices}
+
+\section{OPM Flow Output File Formats}
+\subsection{Overview}
+\subsection{EGRID}
+\subsection{INIT}
+\subsection{Restart}
+\subsection{RFT}
+\subsection{SUMMARY}
+\subsection{SAVE}
+
+\section{CAMWA article}
+\import{CAMWA article/}{paper_body}
+\end{appendices}
+
+\end{document}

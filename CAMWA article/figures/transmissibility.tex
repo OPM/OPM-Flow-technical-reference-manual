@@ -1,0 +1,30 @@
+\tikzstyle{edge}=[gray, thick, draw]
+\tikzstyle{point}=[gray, circle, minimum size=2mm, inner sep=0mm, fill, draw]
+\tikzstyle{dash}=[black, thick, dashed, draw]
+%\tikzstyle{module}=[black, rectangle, rounded corners, fill=blue!20, draw]
+%\tikzstyle{depend}=[black, thick, ->, >=stealth]
+%\tikzstyle{optional}=[black, thick, dashed, ->, >=stealth]
+\begin{tikzpicture}[scale=0.6,font=\small]
+  \draw [edge,fill=red!10] (0,-2) -- (5,0) -- (5,5) -- (-1,4) -- cycle;
+  \draw [edge,fill=green!10] (5,5) -- (5,0) -- (7,-1.5) -- (11,-2) -- (10,5) -- (7,6) -- cycle;
+
+  \node [point] (c1) at (2.5,2) {};
+  \node [point] (c12) at (5,2.5) {};
+  \node [point] (c2) at (8,2.1) {};
+  \node [above left=5pt of {(2.5,2)}] {$\cb_i$};
+  \node [above left=5pt of {(5,2.5)}] {$\cb_{ij}$};
+  \node [above right=5pt of {(7.5,2.1)}] {$\cb_j$};
+
+  \node  [right=1pt of {(5,1)}, outer sep=2pt] {$F_{ij}$};
+
+  \node (x1) at (2.5, 1) {Cell $i$};
+  \node (x1) at (8, 1) {Cell $j$};
+
+  \draw [black, thick, dotted] (c1) -- (c12);% node[midway, below]{$\ell_i$};
+  \draw [black, thick, dotted] (c12) -- (c2);%  node[midway, below]{$\ell_j$};
+
+  \draw [black, thick, ->] (c12) -- (7,2.5);
+  \node [above=5pt of {(6,2.5)}] {$\hat \nb_{ij}$};
+\end{tikzpicture}
+
+
